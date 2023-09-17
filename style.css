@@ -1,0 +1,133 @@
+body{
+   background-color: black;
+}
+#titulo{
+   display: flex;
+   justify-content: center;
+}
+
+.flexContainer {
+   display: inline-flex;
+   flex: 25%;
+   margin-left: 20%;
+}
+
+.flexContainer img {
+   max-height: 200px;
+}
+#cabecera{
+   align-self: center;
+   max-height: 20%;
+   max-width: 15%;
+}
+#foto{
+   max-width: 20%;
+   margin-left: 40%
+}
+
+#atrapalos{
+   position: relative;
+   margin-top: 15%;
+   margin-left: 43%;
+}
+#puntaje{
+   color: aliceblue;
+   font-size: 20px;
+   margin-left: 40%;
+}
+
+#puntos{
+   color: aliceblue;
+}
+
+/* estilos para las cartas */
+
+.container {
+   position: absolute;
+   height: 300px;
+   width: 600px;
+   top: 60%;
+   left: calc(40% - 300px);
+   display: flex;
+ }
+ 
+ .card {
+   display: none; /* AQUÍ SE ACTIVAN O DESACTIVAN TODAS LAS CARTAS*/
+   height: 350px;
+   width: 250px;
+   background-color: #17141d;
+   border-radius: 10px;
+   box-shadow: -1rem 0 3rem #000;
+ /*   margin-left: -50px; */
+   transition: 0.4s ease-out;
+   position: relative;
+   left: 0px;
+ }
+ .card img {
+  margin-top: 35%;
+  height: 50%;
+  width: 75%;
+}
+ 
+ .card:not(:first-child) {
+     margin-left: -50px;
+ }
+ 
+ .card:hover {
+   transform: translateY(-20px);
+   transition: 0.4s ease-out;
+ }
+ 
+ .card:hover ~ .card {
+   position: relative;
+   left: 50px;
+   transition: 0.4s ease-out;
+ }
+ 
+ .title {
+   color: white;
+   font-weight: 300;
+   position: absolute;
+   left: 20px;
+   top: 15px;
+ }
+ 
+ .bar {
+   position: absolute;
+   top: 300px;
+   left: 20px;
+   height: 5px;
+   width: 150px;
+ }
+ 
+ .emptybar {
+   background-color: #2e3033;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .filledbar {
+   position: absolute;
+   top: 0px;
+   z-index: 3;
+   width: 0px;
+   height: 100%;
+   background: rgb(0,154,217);
+   background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+   transition: 0.6s ease-out;
+ }
+ 
+ .card:hover .filledbar {
+   width: 120px;
+   transition: 0.4s ease-out;
+ }
+
+  svg {
+   fill: #17141d;
+   stroke-width: 2px;
+ }
+ 
+ .card:hover .stroke {
+   stroke-dashoffset: 100;
+   transition: 0.6s ease-out;
+ }
